@@ -130,7 +130,7 @@ const LaunchSuccess: React.FC = () => {
 
             {/* Video Player */}
             <iframe
-              src="https://youtu.be/5gKZqP4MIvs?si=3YZo5B3gPyczXqK0"
+              src="https://www.youtube.com/watch?v=5gKZqP4MIvs"
               title="Launch Video"
               className="w-full h-full"
               frameBorder="0"
