@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { CheckCircle, Sparkles, Star, Zap, X } from 'lucide-react';
-import logo from './logo.png'; // Make sure to have logo.png in your project
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { CheckCircle, Sparkles, Star, Zap, X } from "lucide-react";
+import logo from "./logo.png"; // Make sure to have logo.png in your project
 
 const LaunchSuccess: React.FC = () => {
   const navigate = useNavigate();
@@ -12,10 +12,10 @@ const LaunchSuccess: React.FC = () => {
   useEffect(() => {
     setShowConfetti(true);
     setShowFireworks(true);
-    
+
     const confettiTimer = setTimeout(() => setShowConfetti(false), 4000);
     const fireworksTimer = setTimeout(() => setShowFireworks(false), 6000);
-    
+
     return () => {
       clearTimeout(confettiTimer);
       clearTimeout(fireworksTimer);
@@ -35,11 +35,19 @@ const LaunchSuccess: React.FC = () => {
       {/* Enhanced Background Animations - Responsive */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating celebration elements - responsive sizing */}
-        <div className="absolute top-5 sm:top-10 left-5 sm:left-10 w-4 sm:w-6 h-4 sm:h-6 text-yellow-400 animate-float-celebration">⭐</div>
-        <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-6 sm:w-8 h-6 sm:h-8 text-emerald-400 animate-float-celebration-delayed">✨</div>
-        <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-4 sm:w-5 h-4 sm:h-5 text-pink-400 animate-float-celebration-slow">🎉</div>
-        <div className="absolute bottom-5 sm:bottom-10 right-5 sm:right-10 w-5 sm:w-7 h-5 sm:h-7 text-purple-400 animate-float-celebration-reverse">🎊</div>
-        
+        <div className="absolute top-5 sm:top-10 left-5 sm:left-10 w-4 sm:w-6 h-4 sm:h-6 text-yellow-400 animate-float-celebration">
+          ⭐
+        </div>
+        <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-6 sm:w-8 h-6 sm:h-8 text-emerald-400 animate-float-celebration-delayed">
+          ✨
+        </div>
+        <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-4 sm:w-5 h-4 sm:h-5 text-pink-400 animate-float-celebration-slow">
+          🎉
+        </div>
+        <div className="absolute bottom-5 sm:bottom-10 right-5 sm:right-10 w-5 sm:w-7 h-5 sm:h-7 text-purple-400 animate-float-celebration-reverse">
+          🎊
+        </div>
+
         {/* Energy rings - responsive sizing */}
         {[...Array(5)].map((_, i) => (
           <div
@@ -49,7 +57,7 @@ const LaunchSuccess: React.FC = () => {
               width: `${(i + 1) * 60}px`,
               height: `${(i + 1) * 60}px`,
               animationDelay: `${i * 0.5}s`,
-              animationDuration: `${3 + i}s`
+              animationDuration: `${3 + i}s`,
             }}
           />
         ))}
@@ -62,12 +70,18 @@ const LaunchSuccess: React.FC = () => {
             <div
               key={i}
               className={`absolute w-2 sm:w-3 h-2 sm:h-3 rounded-full animate-confetti ${
-                ['bg-emerald-500', 'bg-yellow-400', 'bg-pink-500', 'bg-purple-500', 'bg-blue-500'][i % 5]
+                [
+                  "bg-emerald-500",
+                  "bg-yellow-400",
+                  "bg-pink-500",
+                  "bg-purple-500",
+                  "bg-blue-500",
+                ][i % 5]
               }`}
               style={{
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
+                animationDuration: `${2 + Math.random() * 3}s`,
               }}
             />
           ))}
@@ -84,7 +98,7 @@ const LaunchSuccess: React.FC = () => {
               style={{
                 left: `${20 + Math.random() * 60}%`,
                 top: `${20 + Math.random() * 40}%`,
-                animationDelay: `${i * 0.8}s`
+                animationDelay: `${i * 0.8}s`,
               }}
             >
               {[...Array(12)].map((_, j) => (
@@ -93,7 +107,7 @@ const LaunchSuccess: React.FC = () => {
                   className="absolute w-0.5 sm:w-1 h-0.5 sm:h-1 bg-yellow-400 rounded-full animate-firework-particle"
                   style={{
                     transform: `rotate(${j * 30}deg) translateY(-15px) sm:translateY(-20px)`,
-                    animationDelay: `${i * 0.8}s`
+                    animationDelay: `${i * 0.8}s`,
                   }}
                 />
               ))}
@@ -113,10 +127,10 @@ const LaunchSuccess: React.FC = () => {
             >
               <X size={24} />
             </button>
-            
+
             {/* Video Player */}
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              src="https://youtu.be/5gKZqP4MIvs?si=3YZo5B3gPyczXqK0"
               title="Launch Video"
               className="w-full h-full"
               frameBorder="0"
@@ -134,20 +148,38 @@ const LaunchSuccess: React.FC = () => {
           {/* Success Icon - Responsive sizing */}
           <div className="relative mb-6 sm:mb-8">
             <div className="inline-flex items-center justify-center w-20 sm:w-24 lg:w-28 h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full shadow-xl sm:shadow-2xl animate-success-icon-bounce">
-              <CheckCircle size={window.innerWidth < 640 ? 32 : window.innerWidth < 1024 ? 40 : 48} className="text-white animate-check-draw" />
+              <CheckCircle
+                size={
+                  window.innerWidth < 640
+                    ? 32
+                    : window.innerWidth < 1024
+                      ? 40
+                      : 48
+                }
+                className="text-white animate-check-draw"
+              />
             </div>
-            
+
             {/* Floating icons around main icon - responsive positioning */}
             <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 animate-orbit-1">
-              <Sparkles size={window.innerWidth < 640 ? 16 : 20} className="text-yellow-400" />
+              <Sparkles
+                size={window.innerWidth < 640 ? 16 : 20}
+                className="text-yellow-400"
+              />
             </div>
             <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 animate-orbit-2">
-              <Star size={window.innerWidth < 640 ? 14 : 18} className="text-pink-400" />
+              <Star
+                size={window.innerWidth < 640 ? 14 : 18}
+                className="text-pink-400"
+              />
             </div>
             <div className="absolute -top-2 sm:-top-4 -left-2 sm:-left-4 animate-orbit-3">
-              <Zap size={window.innerWidth < 640 ? 12 : 16} className="text-purple-400" />
+              <Zap
+                size={window.innerWidth < 640 ? 12 : 16}
+                className="text-purple-400"
+              />
             </div>
-            
+
             {/* Pulsing rings - responsive sizing */}
             <div className="absolute inset-0 rounded-full border-2 sm:border-4 border-emerald-300 animate-ring-pulse-1 opacity-30"></div>
             <div className="absolute inset-0 rounded-full border border-emerald-400 sm:border-2 animate-ring-pulse-2 opacity-40"></div>
@@ -166,16 +198,16 @@ const LaunchSuccess: React.FC = () => {
             >
               {/* Logo Image - Made much larger and more prominent */}
               <div className="aspect-[4/3] flex items-center justify-center relative overflow-hidden bg-white p-6 sm:p-8 lg:p-10">
-                <img 
-                  src={logo} 
-                  alt="Logo" 
+                <img
+                  src={logo}
+                  alt="Logo"
                   className="w-full h-full object-contain max-w-none scale-125 sm:scale-150 lg:scale-175"
                 />
-                
+
                 {/* Shimmer Effect - Kept for hover animation */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </div>
-              
+
               {/* Image Caption */}
               <div className="p-3 sm:p-4 bg-white border-t border-gray-100">
                 <p className="text-sm sm:text-base text-gray-600 font-medium">
@@ -194,7 +226,7 @@ const LaunchSuccess: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float-celebration {
           0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
           25% { transform: translateY(-10px) sm:translateY(-15px) rotate(90deg) scale(1.05) sm:scale(1.1); }
