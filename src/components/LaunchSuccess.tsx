@@ -130,10 +130,9 @@ const LaunchSuccess: React.FC = () => {
 
             {/* Video Player */}
             <iframe
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/n5TJ8BujRVQ?si=0rPL_1BSb8cyFBkj"
               title="Launch Video"
+              className="w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
