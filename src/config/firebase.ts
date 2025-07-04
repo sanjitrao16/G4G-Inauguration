@@ -1,5 +1,5 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase } from 'firebase/database';
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBp7S2DrTtxSdfKEzApogop9TWY0ofVMcU",
@@ -9,7 +9,7 @@ const firebaseConfig = {
   messagingSenderId: "355851007199",
   appId: "1:355851007199:web:0b791d818d0ea8e016256a",
   measurementId: "G-5B22X14T8V",
-  databaseURL: "https://gfgapp-3a19e-default-rtdb.firebaseio.com"
+  databaseURL: "https://gfgapp-3a19e-default-rtdb.firebaseio.com",
 };
 
 // Initialize Firebase

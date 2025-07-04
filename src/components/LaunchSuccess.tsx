@@ -129,19 +129,11 @@ const LaunchSuccess: React.FC = () => {
             </button>
 
             {/* Video Player */}
-            {/* <iframe
-              src="https://www.youtube.com/embed/du3Gig67kqk?si=KLmWXnsMxxYtqHEM"
-              title="Launch Video"
-              className="w-full h-full"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            /> */}
-
             <iframe
-              src="https://www.youtube.com/embed/BHACKCNDMW8?si=1KI5pavjRdkZ5Aki"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/n5TJ8BujRVQ?si=0rPL_1BSb8cyFBkj"
               title="Launch Video"
-              className="w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
